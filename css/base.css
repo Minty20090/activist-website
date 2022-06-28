@@ -4,16 +4,20 @@
     --light-color: #ECF39E;
     --light-bg: #e6f2c9;
     --mid-color: #4F772D;
-    --dark-mid: #bece7a;
+    --dark-mid: #b5c99a;
 }
 * {
     padding: 0;
     margin: 0;
 }
+html {
+    width: 100%;
+}
 /* background */
 main {
     padding: 10px;
 }
+
 /* Fonts */
 @font-face {
     font-family: 'Abril';
@@ -26,6 +30,10 @@ main {
 @font-face {
     font-family: 'Playfair';
     src: url(fonts/PlayfairDisplaySC-Regular.ttf);
+}
+@font-face {
+    font-family: 'Bebas';
+    src: url(fonts/BebasNeue-Regular.ttf);
 }
 
 /* Text styling */
@@ -40,7 +48,9 @@ a {
 a:hover {
     font-style: underline;
 }
-
+.centered {
+    text-align: center;
+}
 /* 
 ==================
       Navbar 
@@ -107,20 +117,45 @@ a:hover {
     background-color: rgba(0,0,0,0.1);
 }
   
-  
 .dropdown:hover .dropdown-menu {
     display: block;
-    background-color: var(--dark-color);
+    background-color: var(--mid-color);
 }
 
+/* Heading */
+.heading {
+    position: relative;
+}
+.heading img{
+    width: 100%;
+    position: relative;
+    z-index: -99;
+    max-height: 400px;
+}
+.heading h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    text-align: center;
+    font-size: 4em;
+    color: white;
+    font-family: 'Abril';
+}
 /* Columns */
 
 .column2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    column-rule:51px solid black;
+    grid-template-rows: .2fr 1fr;
+    gap: 25px;
+    
+}
+.column3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 /* Cards */
@@ -129,10 +164,44 @@ a:hover {
     padding: 10px;
     background-color: var(--dark-mid);
     border: 5px double var(--light-bg);
-    color: #132a13;
+    color: #053b06;
     font-family: 'Playfair';
 }
 
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--dark-color);
+    padding:10px 0px;
+}
+.submenu {
+    flex-flow: column nowrap;
+    padding: 5px 30px;
+}
+footer nav {
+    font-family: 'Playfair';
+    padding: 5px 0px;
+    font-size:.8em;
+    margin: 10px;
+}
+footer nav a {
+    padding:10px;
+}
+footer .social {
+    margin: auto;
+}
+footer i {
+    padding: 5px;
+}
+footer nav li ul a {
+    padding-top:0;
+}
+footer h1 {
+    font-family:'Abril';
+    color: var(--light-color);
+    margin: auto;
+    font-size: 3em;
+}
 /* Media Queries */
 
 @media (max-width:600px) {
@@ -152,6 +221,7 @@ a:hover {
     .column2 {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        text-align: center;
     }
     
 }
@@ -162,5 +232,10 @@ a:hover {
         flex-flow: row nowrap;
         justify-content: space-evenly;
         line-height: 2em;
+    }
+}
+@media(max-width:430px){
+    .showcase .container .number{
+        display: none;
     }
 }

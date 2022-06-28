@@ -1,0 +1,12 @@
+/* Quote */
+.quote h1 {
+    font-size: 1.35em;
+    font-family: 'Prata';
+}
+.quote h2 {
+    text-align: right;
+    font-size: 1em;
+}
+.quote .card {
+    padding: 10px;
+}
