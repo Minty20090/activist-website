@@ -1,0 +1,8 @@
+/* showcase */
+.showcase {
+    position: relative;
+    height: 500px;
+}
+.container {
+    position: absolute;
+}

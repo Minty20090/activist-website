@@ -1,0 +1,166 @@
+:root {
+    /* Color palette */
+    --dark-color: #31572C;
+    --light-color: #ECF39E;
+    --light-bg: #e6f2c9;
+    --mid-color: #4F772D;
+    --dark-mid: #bece7a;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+/* background */
+main {
+    padding: 10px;
+}
+/* Fonts */
+@font-face {
+    font-family: 'Abril';
+    src: url(fonts/AbrilFatface-Regular.ttf);
+}
+@font-face {
+    font-family: 'Prata';
+    src: url(fonts/Prata-Regular.ttf);
+}
+@font-face {
+    font-family: 'Playfair';
+    src: url(fonts/PlayfairDisplaySC-Regular.ttf);
+}
+
+/* Text styling */
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+a:hover {
+    font-style: underline;
+}
+
+/* 
+==================
+      Navbar 
+==================
+*/
+.navbar {
+    background-color: var(--dark-color);
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+.navbar .container {
+    width: 85%;
+}
+.navbar .flex-end {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    line-height: 2em;
+    align-items: center;
+}
+.navbar li{
+    padding: 20px;
+    font-family: 'Playfair';
+    text-align: center;
+}
+.navbar h1 {
+    padding: 10px;
+    font-family: 'Abril';
+    text-align: center;
+}
+
+.navbar li a:hover {
+    text-shadow: 1px 1px 3px var(--light-color);
+}
+/* Dropdown */
+
+.dropdown {
+    display: inline-block;
+}
+  
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-menu a {
+    color: var(--light-color);
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-menu a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+  
+  
+.dropdown:hover .dropdown-menu {
+    display: block;
+    background-color: var(--dark-color);
+}
+
+/* Columns */
+
+.column2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    column-rule:51px solid black;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--dark-mid);
+    border: 5px double var(--light-bg);
+    color: #132a13;
+    font-family: 'Playfair';
+}
+
+/* Media Queries */
+
+@media (max-width:600px) {
+    /* navbar */
+    .navbar ul {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        line-height: 2em;
+    }
+    .navbar li {
+        padding: 10px;
+    }
+    .navbar h1 {
+        margin: auto 0;
+    }
+    .column2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    
+}
+@media (min-width:601px) {
+    /* navbar */
+    .navbar ul {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        line-height: 2em;
+    }
+}
