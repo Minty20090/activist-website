@@ -1,0 +1,31 @@
+main h1 {
+    text-align: center;
+    font-family: 'Abril';
+    color: var(--dark-color);
+}
+.card ul {
+    list-style-type: circle;
+    padding-left: 30px;
+    font-family: 'Prata';
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.card {
+    margin-top: 10px;
+    background-color: var(--light-bg);
+}
+
+.column2 {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    text-align: left;
+}
+
+@media (max-width:600px) {
+    .column2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+    }
+}

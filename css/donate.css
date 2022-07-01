@@ -1,0 +1,20 @@
+.showcase {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.card {
+    margin: 10px;
+    max-width: 450px;
+}
+
+main h1{
+    font-family: 'Abril';
+}
+main p {
+    font-family: 'Prata';
+    margin-top: 10px;
+}
+.showcase .card a{
+    color: var(--mid-color);
+}

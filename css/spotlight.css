@@ -1,0 +1,41 @@
+main {
+    text-align: center;
+}
+main a {
+    color: var(--dark-color);
+    text-decoration: underline;
+}
+main h1{
+    font-family: 'Abril';
+    color: var(--dark-color);
+}
+main p {
+    margin: 10px;
+    font-family: 'Prata';
+}
+/* showcase */
+.showcase {
+    display: flex;
+    flex-flow: row wrap;
+    width: 95%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+.showcase .card {
+    background-color: var(--light-bg);
+    text-align: center;
+    margin: 5px;
+    width: 300px;
+    padding: auto;
+}
+.showcase .card h1 {
+    font-size: 1.5em;
+}
+.showcase .card img {
+    max-width: 200px;
+}
+
+.cite {
+    font-size: .8em;
+}
